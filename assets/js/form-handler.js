@@ -19,7 +19,6 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     formData.append('to_name', 'Oyku');
     formData.append('from_name', formData.get('name'));
     formData.append('from_email', formData.get('email'));
-    formData.append('message', formData.get('message'));
 
     emailjs.sendForm(serviceID, templateID, formData)
         .then(() => {
