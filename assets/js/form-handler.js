@@ -7,6 +7,12 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 
     const serviceID = 'service_99poy4a';
     const templateID = 'template_um13shp';
+    console.log('Form Data:', {
+        to_name: 'Oyku',
+        from_name: formData.get('name'),
+        from_email: formData.get('email'),
+        message: formData.get('message')
+    });
     // Create a formData object and append additional fields
     const formData = new FormData(this);
     formData.append('to_name', 'Oyku');
@@ -23,9 +29,3 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
             alert('Failed to send message: ' + JSON.stringify(err));
         })
 })
-console.log('Form Data:', {
-    to_name: 'Oyku',
-    from_name: formData.get('name'),
-    from_email: formData.get('email'),
-    message: formData.get('message')
-});
