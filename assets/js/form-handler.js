@@ -20,7 +20,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     formData.append('from_name', formData.get('name'));
     formData.append('from_email', formData.get('email'));
 
-    emailjs.sendForm(serviceID, templateID, formData)
+    emailjs.send(serviceID, templateID, formData)
         .then(() => {
             alert('Message sent successfully!')
             // Clear the form fields
