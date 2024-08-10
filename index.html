@@ -113,7 +113,7 @@
 			<header class="major">
 				<h2>Get in touch</h2>
 			</header>
-			<form id="contact-form" method="post" action="#">
+			<form id="contact-form" method="post">
 				<div class="row gtr-uniform">
 					<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" />
 					</div>
@@ -149,6 +149,7 @@
 	</section>
 
 	<!-- Scripts -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -157,15 +158,8 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script type="text/javascript" src="form-handler.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-	</script>
-	<script type="text/javascript">
-		(function () {
-			emailjs.init({
-				publicKey: "JkN2rApvWuANYe7Nn",
-			});
-		})();
-	</script>
+
+
 
 </body>
 
