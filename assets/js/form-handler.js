@@ -16,13 +16,13 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 
     emailjs.sendForm(serviceID, templateID, formData)
         .then(() => {
-            alert('Message sent successfully!');
+            alert('Message sent successfully!')
             // Clear the form fields
             document.getElementById('contact-form').reset();
         }, (err) => {
             alert('Failed to send message: ' + JSON.stringify(err));
-        });
-});
+        })
+})
 console.log('Form Data:', {
     to_name: 'Oyku',
     from_name: formData.get('name'),
