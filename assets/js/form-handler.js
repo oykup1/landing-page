@@ -7,6 +7,8 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 
     const serviceID = 'service_99poy4a';
     const templateID = 'template_um13shp';
+    const formData = new FormData(this);
+
     console.log('Form Data:', {
         to_name: 'Oyku',
         from_name: formData.get('name'),
@@ -14,7 +16,6 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         message: formData.get('message')
     });
     // Create a formData object and append additional fields
-    const formData = new FormData(this);
     formData.append('to_name', 'Oyku');
     formData.append('from_name', formData.get('name'));
     formData.append('from_email', formData.get('email'));
