@@ -9,8 +9,9 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     const templateID = 'template_um13shp';
     // Create a formData object and append additional fields
     const formData = new FormData(this);
-    formData.append('to_name', 'Oyku'); // Update with actual recipient name if needed
+    formData.append('to_name', 'Oyku');
     formData.append('from_name', formData.get('name'));
+    formData.append('from_email', formData.get('email'));
     formData.append('message', formData.get('message'));
 
     emailjs.sendForm(serviceID, templateID, formData)
@@ -21,4 +22,10 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         }, (err) => {
             alert('Failed to send message: ' + JSON.stringify(err));
         });
+});
+console.log('Form Data:', {
+    to_name: 'Oyku',
+    from_name: formData.get('name'),
+    from_email: formData.get('email'),
+    message: formData.get('message')
 });
