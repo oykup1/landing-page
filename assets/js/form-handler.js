@@ -7,16 +7,9 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 
     const serviceID = 'service_99poy4a';
     const templateID = 'template_um13shp';
-    const formData = new FormData(this);
-
-    const templateParams = {
-        from_name: formData.get('name'),
-        from_email: formData.get('email'),
-        message: formData.get('message')
-    }
 
 
-    emailjs.send(serviceID, templateID, templateParams)
+    emailjs.sendForm(serviceID, templateID, '#contact-form')
         .then(() => {
             alert('Message sent successfully!')
             // Clear the form fields
